@@ -1,0 +1,13 @@
+services:
+  tugilgan-kun-bot:
+    build: .
+    container_name: tugilgan-kun-bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=8899378335:AAG5FnSy-axYFZ-KfPnXkxTrHheRi6ceXL8
+    restart: unless-stopped
+    networks:
+      - ukon-net
+
+networks:
+  ukon-net:
+    driver: bridge
